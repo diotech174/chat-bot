@@ -1,0 +1,75 @@
+[
+    {
+        "router" : { 
+            "pergunta": "oie",
+            "respostas":[
+                "oiii",
+                "olá como posso ajudar?", 
+                "oi", 
+                "oi tudo bem?",
+                "sai fora, você está brincando comigo?"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "pergunta": "tudo bem?",
+            "respostas":[
+                "olá como posso ajudar?", 
+                "oi", 
+                "oi tudo bem?",
+                "sai fora, você está brincando comigo?"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "pergunta": "olá",
+            "respostas":[
+                "olá como posso ajudar?", 
+                "oi", 
+                "oi tudo bem?",
+                "sai fora, você está brincando comigo?"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "pergunta": "sim",
+            "respostas":[
+                "que bom, como posso ajudar?", 
+                "que ótimo!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "pergunta" : "bom dia",
+            "respostas" : [
+                "bom dia tudo bem com você?",
+                "olá bom dia",
+                "o que há de bom?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "pergunta" : "estou aqui",
+            "respostas" : [
+                "a que bom!",
+                "ok!",
+                "então voltando ao assunto..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "pergunta" : "voltei",
+            "respostas" : [
+                "a que bom!",
+                "ok!",
+                "então voltando ao assunto..."
+            ]
+        }
+    }
+]

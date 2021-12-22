@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA-CHAT</title>
+    <script src="chat.js"></script>
+    <style>
+        .stoped{
+            position: relative;
+            top: -12px;
+            left: -100px;
+            color: #FFF;
+        }
+        .writing{
+            position: relative;
+            top: -12px;
+            left: -100px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <textarea id="chat" cols="60" rows="20" readonly="on"></textarea>
+    <span class="stoped" id="status">escrevendo...</span>
+    <br>
+    <br>
+    <input type="text" id="msg" size="68">
+    <button id="enviar" onclick="send()">enviar</button>
+    
+</body>
+</html>
