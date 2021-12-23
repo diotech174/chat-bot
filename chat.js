@@ -16,8 +16,6 @@ function getResponse(filename, search) { // PROCESSA A RESPOSTA
 
         core = JSON.parse(data); 
 
-        var chat = document.getElementById('chat').value;
-
         var results = 0;
 
         for(i=0; i < core.length; i++)
@@ -56,6 +54,9 @@ function send() // ENVIA PERGUNTA AO ROBÔ
     document.getElementById('chat').appendChild(x);
     var br = document.createElement('br');
     document.getElementById('chat').appendChild(br);
+
+    var objDiv = document.getElementById("chat");
+    objDiv.scrollTop = objDiv.scrollHeight;
 
     getResponse("core.json", pergunta);
 
