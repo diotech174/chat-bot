@@ -34,7 +34,7 @@ function getResponse(filename, search) { // PROCESSA A RESPOSTA
 
         if(results == 0) // QUANDO NÃO ENCONTRAR UMA RESPOSTA
         {
-            response = "não entendi! pode ser mais claro?";
+            response = robot + ": não entendi! pode ser mais claro?";
         }
     });
 }
@@ -74,7 +74,7 @@ function send() // ENVIA PERGUNTA AO ROBÔ
 
         if(nova_pergunta == false)
         {
-            response = robot + " olá você está ai???";
+            response = robot + ": olá você está ai???";
         }
 
     }, getRndInteger(40000, 60000));
