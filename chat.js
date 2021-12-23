@@ -95,7 +95,7 @@ setInterval(function(){ // SIMULAÇÃO
             setTimeout(function(){ // MOSTRA RESPOSTA
 
                 var balloon = document.createElement('div');
-                balloon.setAttribute('style', 'min-width: 20px; margin-left: 30px; background-color: #CEF7E2; border: 1px solid #CCC; padding: 8px; border-radius: 5px 5px');
+                balloon.setAttribute('style', 'min-width: 20px; margin-left: 30px; background-color: #CEF7E2; border: 1px solid #58FAAC; padding: 8px; border-radius: 5px 5px');
 
     
                 var x = document.createElement('label');
