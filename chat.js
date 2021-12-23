@@ -80,7 +80,7 @@ function send() // ENVIA PERGUNTA AO ROBÔ
         document.getElementById("message").value = "";
         document.getElementById("message").focus();
 
-        if(response.indexOf("xau") = -1 || response.indexOf("tchal") != -1 || response.indexOf("bye") != -1)
+        if(response.indexOf("xau") == -1 && response.indexOf("tchal") == -1 && response.indexOf("bye") == -1)
         {
             timeouts.push( setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
 
