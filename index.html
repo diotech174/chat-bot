@@ -10,13 +10,13 @@
         .stoped{
             position: relative;
             top: -30px;
-            left:380px;
+            left:300px;
             color: #FFF;
         }
         .writing{
             position: relative;
             top: -30px;
-            left: 380px;
+            left: 300px;
             color: #000;
         }
 
@@ -47,15 +47,25 @@
 <body>
     <div class="container">
         <div id="chat" class="chat-area">
-            <label>Envie sua pergunta:</label>
+            <label id="start">Iniciar conversa...</label>
             <br>
             <br>
         </div>
         <span class="stoped" id="status">escrevendo...</span>
         <br>
         <br>
-        <input type="text" id="msg" size="65">
+        <input type="text" id="message" class="message" size="65">
         <button id="enviar" onclick="send()">enviar</button>
+        <script type="text/javascript">
+            var msg = document.getElementById("message");
+
+            msg.onkeypress = function(e) {
+                if(e.keyCode == 13)
+                {
+                    send();
+                }
+            };
+        </script>
     </div>
 </body>
 </html>

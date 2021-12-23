@@ -45,13 +45,20 @@ function send() // ENVIA PERGUNTA AO ROBÔ
 {
     nova_pergunta = true;
 
-    var pergunta = document.getElementById("msg").value;
+    document.getElementById("start").innerHTML = "Conversa iniciada...";
+
+    var pergunta = document.getElementById("message").value;
+
+    var balloon = document.createElement('div');
+    balloon.setAttribute('style', 'min-width: 20px; background-color: #CFF6F4; border: 1px solid #CCC; padding: 8px; border-radius: 5px 5px');
 
     var x = document.createElement('label');
     x.setAttribute('style', 'color: blue');
     x.innerHTML =  "Você: " + pergunta;
 
-    document.getElementById('chat').appendChild(x);
+    balloon.appendChild(x);
+
+    document.getElementById('chat').appendChild(balloon);
     var br = document.createElement('br');
     document.getElementById('chat').appendChild(br);
 
@@ -60,7 +67,8 @@ function send() // ENVIA PERGUNTA AO ROBÔ
 
     getResponse("core.json", pergunta);
 
-    document.getElementById("msg").value = "";
+    document.getElementById("message").value = "";
+    document.getElementById("message").focus();
 
     setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
 
@@ -82,14 +90,21 @@ setInterval(function(){ // SIMULAÇÃO
         response = "";
         setTimeout(function(){ // INICIA SIMULAÇÃO DE "ESCRENDO RESPOSTA"
             document.getElementById('status').setAttribute('class', 'writing');
+            document.getElementById('status').innerHTML = robot+" está escrevendo...";
 
             setTimeout(function(){ // MOSTRA RESPOSTA
 
+                var balloon = document.createElement('div');
+                balloon.setAttribute('style', 'min-width: 20px; margin-left: 30px; background-color: #CEF7E2; border: 1px solid #CCC; padding: 8px; border-radius: 5px 5px');
+
+    
                 var x = document.createElement('label');
                 x.setAttribute('style', 'color: green');
                 x.innerHTML = chat;
 
-                document.getElementById('chat').appendChild(x);
+                balloon.appendChild(x);
+
+                document.getElementById('chat').appendChild(balloon);
                 var br = document.createElement('br');
                 document.getElementById('chat').appendChild(br);
 
