@@ -50,10 +50,10 @@ function send() // ENVIA PERGUNTA AO ROBÔ
     var pergunta = document.getElementById("message").value;
 
     var balloon = document.createElement('div');
-    balloon.setAttribute('style', 'min-width: 20px; background-color: #CFF6F4; border: 1px solid #CCC; padding: 8px; border-radius: 5px 5px');
+    balloon.setAttribute('style', 'min-width: 20px; background-color: #CFE3F7; border: 1px solid #E1F2F6; padding: 8px; border-radius: 5px 5px');
 
     var x = document.createElement('label');
-    x.setAttribute('style', 'color: #58ADFB');
+    x.setAttribute('style', 'color: #5882FA');
     x.innerHTML =  "Você: " + pergunta;
 
     balloon.appendChild(x);

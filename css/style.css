@@ -1,0 +1,103 @@
+body
+{
+    background-color: #80F6BE;
+}
+
+.stoped{
+    position: relative;
+    top: -30px;
+    left:300px;
+    color: transparent;
+}
+.writing{
+    position: relative;
+    top: -30px;
+    left: 300px;
+    color: #525252;
+}
+
+.chat-area
+{
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+    width: 480px;
+    height: 300px;
+    background-color: #FFF;
+    border-radius: 30px 30px;
+}
+
+.container
+{
+    margin: auto;
+    width: 800px;
+    padding-top: 60px;
+    display: flex;
+}
+
+.main
+{
+    width: 520px;
+}
+
+.navbar-right
+{
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 415px;
+    background-color: #E1F2F6;
+    margin-left: 10px;
+    border-radius: 30px 30px;
+}
+
+.profile{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    border-radius: 20px 20px;
+}
+.profile-nickname{
+    font-size: 10px;
+    margin-left: 20px;
+}
+.form-control
+{
+    border-radius: 30px 30px;
+    padding: 20px;
+    border: 2px solid #58FAAC;
+}
+
+.form-control:focus
+{
+    outline:solid 0px;
+}
+
+.btn
+{
+    background-color: #58FAAC;
+    width: 50px;
+    border: 1px solid #58FAAC; 
+    color: #088A08;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 100% 100%;
+    text-align: center;
+    position: relative;
+    top: -55px;
+    left: 466px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+background: #CCC;        /* color of the tracking area */
+}

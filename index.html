@@ -6,56 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IA-CHAT</title>
     <script src="chat.js"></script>
-    <style>
-        .stoped{
-            position: relative;
-            top: -30px;
-            left:300px;
-            color: transparent;
-        }
-        .writing{
-            position: relative;
-            top: -30px;
-            left: 300px;
-            color: #525252;
-        }
-
-        .chat-area
-        {
-            border: 1px solid #CCC;
-            overflow: scroll;
-            overflow-x: hidden;
-            padding: 20px;
-            width: 480px;
-            height: 300px;
-            background-color: #FFF;
-        }
-
-        .container
-        {
-            margin: auto;
-            width: 550px;
-            padding-top: 60px;
-        }
-
-        body
-        {
-            background-color: #80F6BE;
-        }
-    </style>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <div id="chat" class="chat-area">
-            <label id="start" style="color: #525252;">Iniciar conversa...</label>
+        <div class="main">
+            <div id="chat" class="chat-area">
+                <label id="start" style="color: #525252;">Iniciar conversa...</label>
+                <br>
+                <br>
+            </div>
+            <span class="stoped" id="status">escrevendo...</span>
             <br>
-            <br>
+            <input type="text" id="message" class="form-control" size="75">
+            <div id="enviar" class="btn" onclick="send()">
+                <i class="fa fa-paper-plane-o"></i>
+            </div>
         </div>
-        <span class="stoped" id="status">escrevendo...</span>
-        <br>
-        <br>
-        <input type="text" id="message" class="message" size="70">
-        <button id="enviar" onclick="send()">enviar</button>
+        <div class="navbar-right">
+            <img src="img/zia.png" class="profile">
+            <br>
+            <label class="profile-nickname">Zia (Online)</label>
+        </div>
+
         <script type="text/javascript">
             var msg = document.getElementById("message");
 
