@@ -1,8 +1,8 @@
 [
     {
         "router" : { 
-            "pergunta": "oie",
-            "respostas":[
+            "entrada": ["oie"],
+            "saidas":[
                 "oiii",
                 "olá como posso ajudar?", 
                 "oi", 
@@ -13,8 +13,8 @@
     },
     {
         "router" : { 
-            "pergunta": "tudo bem?",
-            "respostas":[
+            "entrada": ["tudo","bem","?"],
+            "saidas":[
                 "olá como posso ajudar?", 
                 "oi", 
                 "oi tudo bem?",
@@ -24,8 +24,8 @@
     },
     {
         "router" : { 
-            "pergunta": "olá",
-            "respostas":[
+            "entrada": ["olá"],
+            "saidas":[
                 "olá como posso ajudar?", 
                 "oi", 
                 "oi tudo bem?",
@@ -35,8 +35,8 @@
     },
     {
         "router" : { 
-            "pergunta": "sim",
-            "respostas":[
+            "entrada": ["sim"],
+            "saidas":[
                 "que bom, como posso ajudar?", 
                 "que ótimo!"
             ]
@@ -44,17 +44,8 @@
     },
     {
         "router" : { 
-            "pergunta": "posso sim",
-            "respostas":[
-                "que bom, como posso ajudar?", 
-                "que ótimo!"
-            ]
-        }
-    },
-    {
-        "router" : { 
-            "pergunta": "posso",
-            "respostas":[
+            "entrada": ["posso", "sim"],
+            "saidas":[
                 "que bom, como posso ajudar?", 
                 "que ótimo!"
             ]
@@ -62,8 +53,8 @@
     },
     {
         "router": {
-            "pergunta" : "bom dia",
-            "respostas" : [
+            "entrada" : ["bom", "dia"],
+            "saidas" : [
                 "bom dia tudo bem com você?",
                 "olá bom dia",
                 "o que há de bom?"
@@ -72,8 +63,8 @@
     },
     {
         "router": {
-            "pergunta" : "estou aqui",
-            "respostas" : [
+            "entrada" : ["estou", "aqui"],
+            "saidas" : [
                 "a que bom!",
                 "ok!",
                 "então voltando ao assunto..."
@@ -82,8 +73,8 @@
     },
     {
         "router": {
-            "pergunta" : "voltei",
-            "respostas" : [
+            "entrada" : ["voltei"],
+            "saidas" : [
                 "a que bom!",
                 "ok!",
                 "então voltando ao assunto..."
@@ -92,8 +83,8 @@
     },
     {
         "router": {
-            "pergunta" : "estou sim",
-            "respostas" : [
+            "entrada" : ["estou", "sim"],
+            "saidas" : [
                 "a que bom!",
                 "ok!",
                 "então voltando ao assunto..."
@@ -102,8 +93,8 @@
     },
     {
         "router": {
-            "pergunta" : "espera um pouco",
-            "respostas" : [
+            "entrada" : ["espera", "um", "pouco"],
+            "saidas" : [
                 "tudo bem!",
                 "ok!",
                 "aguardo sim..."

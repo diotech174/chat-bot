@@ -15,20 +15,27 @@ function getResponse(filename, search) { // PROCESSA A RESPOSTA
     fetch(filename).then((resp) => resp.text()).then(function(data) {
 
         core = JSON.parse(data); 
-
         var results = 0;
+
+        var keys = search.split(" ");
 
         for(i=0; i < core.length; i++)
         {
-            var aux = core[i].router;
+            var router = core[i].router;
 
-            if(aux.pergunta.indexOf(search.toLowerCase()) != -1)
+            for(h=0; h < core[i].router.entrada.length; h++)
             {
+                for(j=0; j < keys.length; j++)
+                {
+                    if(router.entrada[h].indexOf(keys[j].toLowerCase()) != -1)
+                    {
 
-                results++;
+                        results++;
 
-                var max = aux.respostas.length -1;
-                response = robot + ": " + aux.respostas[getRndInteger(0, max)];               
+                        var max = router.saidas.length -1;
+                        response = robot + ": " + router.saidas[getRndInteger(0, max)];               
+                    }
+                }
             }
         }
 
@@ -43,41 +50,44 @@ function getResponse(filename, search) { // PROCESSA A RESPOSTA
 
 function send() // ENVIA PERGUNTA AO ROBÔ
 {
-    nova_pergunta = true;
+    if(document.getElementById("message").value.length > 0)
+    {
+        nova_pergunta = true;
 
-    document.getElementById("start").innerHTML = "Conversa iniciada...";
+        document.getElementById("start").innerHTML = "Conversa iniciada...";
 
-    var pergunta = document.getElementById("message").value;
+        var pergunta = document.getElementById("message").value;
 
-    var balloon = document.createElement('div');
-    balloon.setAttribute('style', 'min-width: 20px; background-color: #CFE3F7; border: 1px solid #E1F2F6; padding: 8px; border-radius: 5px 5px');
+        var balloon = document.createElement('div');
+        balloon.setAttribute('style', 'min-width: 20px; background-color: #CFE3F7; border: 1px solid #E1F2F6; padding: 8px; border-radius: 5px 5px');
 
-    var x = document.createElement('label');
-    x.setAttribute('style', 'color: #5882FA');
-    x.innerHTML =  "Você: " + pergunta;
+        var x = document.createElement('label');
+        x.setAttribute('style', 'color: #5882FA');
+        x.innerHTML =  "Você: " + pergunta;
 
-    balloon.appendChild(x);
+        balloon.appendChild(x);
 
-    document.getElementById('chat').appendChild(balloon);
-    var br = document.createElement('br');
-    document.getElementById('chat').appendChild(br);
+        document.getElementById('chat').appendChild(balloon);
+        var br = document.createElement('br');
+        document.getElementById('chat').appendChild(br);
 
-    var objDiv = document.getElementById("chat");
-    objDiv.scrollTop = objDiv.scrollHeight;
+        var objDiv = document.getElementById("chat");
+        objDiv.scrollTop = objDiv.scrollHeight;
 
-    getResponse("core.json", pergunta);
+        getResponse("core.json", pergunta);
 
-    document.getElementById("message").value = "";
-    document.getElementById("message").focus();
+        document.getElementById("message").value = "";
+        document.getElementById("message").focus();
 
-    setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
+        setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
 
-        if(nova_pergunta == false)
-        {
-            response = robot + ": olá você está ai???";
-        }
+            if(nova_pergunta == false)
+            {
+                response = robot + ": olá você está ai???";
+            }
 
-    }, getRndInteger(40000, 60000));
+        }, getRndInteger(40000, 60000));
+    }
 }
 
 //=====================================================================================

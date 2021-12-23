@@ -3,6 +3,14 @@ body
     background-color: #80F6BE;
 }
 
+div:nth-child(1) {
+    font-family: 'Crimson Pro', serif;
+}
+
+div:nth-child(2) {
+    font-family: 'Literata’, serif;
+}
+
 .stoped{
     position: relative;
     top: -30px;
@@ -31,7 +39,7 @@ body
 {
     margin: auto;
     width: 800px;
-    padding-top: 60px;
+    padding-top: 30px;
     display: flex;
 }
 
@@ -61,10 +69,12 @@ body
     cursor: pointer;
     border-radius: 20px 20px;
 }
+
 .profile-nickname{
-    font-size: 10px;
+    font-size: 14px;
     margin-left: 20px;
 }
+
 .form-control
 {
     border-radius: 30px 30px;
@@ -100,4 +110,13 @@ body
 
 ::-webkit-scrollbar-track {
 background: #CCC;        /* color of the tracking area */
+}
+
+.footer
+{
+    margin-top: 10px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
 }
