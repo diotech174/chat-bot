@@ -27,7 +27,7 @@ function getResponse(filename, search) { // PROCESSA A RESPOSTA
             {
                 for(j=0; j < keys.length; j++)
                 {
-                    if(router.entrada[h].indexOf(keys[j].toLowerCase()) != -1)
+                    if(router.entrada[h].indexOf(keys[j].toLowerCase().replace("!!!", "").replace("???", "").replace("...", "").replace("!", "".replace(".", "").replace("?", ""))) != -1)
                     {
 
                         results++;

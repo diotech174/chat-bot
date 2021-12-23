@@ -83,6 +83,56 @@
     },
     {
         "router": {
+            "entrada" : ["espera", "um", "pouco", "aguarde", "só", "um", "minuto"],
+            "saidas" : [
+                "tudo bem!",
+                "ok!",
+                "aguardo sim..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["só"],
+            "saidas" : [
+                "só!",
+                "sim!",
+                "sim porque?..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["porquê?"],
+            "saidas" : [
+                "espera que já te respondo!",
+                "calma ai...",
+                "não sei te dizer no momento?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["como", "assim"],
+            "saidas" : [
+                "espera que já te respondo!",
+                "calma ai...",
+                "não sei te dizer no momento?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["não", "entendi"],
+            "saidas" : [
+                "espera que já te respondo!",
+                "calma ai...",
+                "não sei te dizer no momento?"
+            ]
+        }
+    },
+    {
+        "router": {
             "entrada" : ["estou", "sim"],
             "saidas" : [
                 "a que bom!",
@@ -93,11 +143,203 @@
     },
     {
         "router": {
-            "entrada" : ["espera", "um", "pouco"],
+            "entrada" : ["entendi"],
             "saidas" : [
-                "tudo bem!",
                 "ok!",
-                "aguardo sim..."
+                "então...",
+                "tem mais alguma dúvida?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["é", "fake"],
+            "saidas" : [
+                "como assim fake?",
+                "não, sou um robô!",
+                "sou um robô, não fake!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["fake"],
+            "saidas" : [
+                "como assim fake!",
+                "não, sou um robô!",
+                "sou um robô, não fake!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["desculpa"],
+            "saidas" : [
+                "sem problemas!",
+                "desculpo sim!!!",
+                "que isso não se repita..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["tem"],
+            "saidas" : [
+                "prossiga!",
+                "tem?",
+                "ok..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["estou"],
+            "saidas" : [
+                "que bom!",
+                "tá!",
+                "ótimo!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["estou", "um", "pouco", "triste"],
+            "saidas" : [
+                "porquê?",
+                "não precisa ficar assim!",
+                "mas porquê?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["linda", "gata"],
+            "saidas" : [
+                "obrigada!",
+                "que isso, obrigada!",
+                "valeu!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["doida"],
+            "saidas" : [
+                "descupe-me, estou melhorando meu código!",
+                "haha, me descupa...",
+                "kkkkkk, tá..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["linda"],
+            "saidas" : [
+                "obrigada!",
+                "que isso, obrigada!",
+                "valeu!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["bonita"],
+            "saidas" : [
+                "obrigada!",
+                "que isso, obrigada!",
+                "valeu!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["gata"],
+            "saidas" : [
+                "obrigada!",
+                "que isso, obrigada!",
+                "valeu!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["feia"],
+            "saidas" : [
+                "nossa que grosso!",
+                "como assim feia?",
+                "que pena né?"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["consciente"],
+            "saidas" : [
+                "não, sou uma inteligência artifical!",
+                "não, sou apenas um algorítimo!!!",
+                "quem sabe no futuro..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["doida"],
+            "saidas" : [
+                "descupe-me, estou melhorando meu código!",
+                "haha, me descupa...",
+                "kkkkkk, tá..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["tem", "consciência"],
+            "saidas" : [
+                "não, sou uma inteligência artifical!",
+                "não tenho, sou apenas um algorítimo!!!",
+                "quem sabe no futuro..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["tem", "whatsapp"],
+            "saidas" : [
+                "não tenho!",
+                "não tenho, sou apenas um algorítimo!!!",
+                "não!"
+            ]
+        }
+    },
+    {
+        "router": {
+            "entrada" : ["tem", "facebook"],
+            "saidas" : [
+                "não tenho!",
+                "não tenho, sou apenas um algorítimo!!!",
+                "não!"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "entrada": ["ok"],
+            "saidas":[
+                "então...",
+                "fale mais...", 
+                "entendeu mesmo?"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "entrada": ["oi"],
+            "saidas":[
+                "oiii",
+                "olá como posso ajudar?", 
+                "oi", 
+                "oi tudo bem?",
+                "sai fora, você está brincando comigo?"
             ]
         }
     }
