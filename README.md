@@ -4,4 +4,4 @@ Para programar o chat é só alimentar o arquivo core.json com novas rotas de pe
 
 Exemplo:
 
-{"router": {"pergunta": "digite sua pergunta aqui...", "respostas": ["resposta1", "resposta2", ...]}}
+{"router": {"entrada": ["palavra1", "palavra2" ... ], "saidas": ["resposta1", "resposta2", ...]}}
