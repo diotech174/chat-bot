@@ -403,9 +403,10 @@
     {
         "router" : { 
             "entrada": [
-                "do que você está rindo", 
+                "do que está rindo", 
                 "ta rindo de que", 
-                "porquê ta rindo"
+                "porquê ta rindo",
+                "porquê riu?"
             ],
             "saidas":[
                 "sei lá!",
