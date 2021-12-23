@@ -384,5 +384,48 @@
                 "já vai?"
             ]
         }
+    },
+    {
+        "router" : { 
+            "entrada": [
+                "hahahahahahahahahahahahahahahahahaha", 
+                "hehehehehehehehehehehehehehehehehehe", 
+                "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+            ],
+            "saidas":[
+                "kkkkkk!",
+                "kkk!",
+                "hahahahaha!", 
+                "kkkkkkkkkkkkkkk!"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "entrada": [
+                "do que você está rindo", 
+                "ta rindo de que", 
+                "porquê ta rindo"
+            ],
+            "saidas":[
+                "sei lá!",
+                "não sei!",
+                "você riu primeiro!"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "entrada": [
+                "vou sair", 
+                "vou nessa", 
+                "tenho que sair"
+            ],
+            "saidas":[
+                "tá!",
+                "até mais!",
+                "ok, semp problemas!"
+            ]
+        }
     }
 ]
