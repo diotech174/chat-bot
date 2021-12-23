@@ -1,6 +1,7 @@
 var response = ""; // RESERVA A ULTIMA RESPOSTA ENVIADO PELO ROBÔ
 var nova_pergunta = false;
 var robot = "Zia"; // NOME DO ROBÔ
+var timeouts = []; // TODOS OS TEMPORIZADORES
 
 //=====================================================================================
 
@@ -79,14 +80,25 @@ function send() // ENVIA PERGUNTA AO ROBÔ
         document.getElementById("message").value = "";
         document.getElementById("message").focus();
 
-        setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
+        if(response.indexOf("xau") = -1 || response.indexOf("tchal") != -1 || response.indexOf("bye") != -1)
+        {
+            timeouts.push( setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
 
-            if(nova_pergunta == false)
-            {
-                response = robot + ": olá você está ai???";
+                if(nova_pergunta == false)
+                {
+                    response = robot + ": olá você está ai???";
+                }
+
+            }, getRndInteger(40000, 60000)) );
+        }
+        else
+        {
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
             }
 
-        }, getRndInteger(40000, 60000));
+            timeouts = [];
+        }
     }
 }
 
@@ -97,6 +109,7 @@ setInterval(function(){ // SIMULAÇÃO
     if(response.length > 0)
     {
         var chat = response;
+
         response = "";
         setTimeout(function(){ // INICIA SIMULAÇÃO DE "ESCRENDO RESPOSTA"
             document.getElementById('status').setAttribute('class', 'writing');

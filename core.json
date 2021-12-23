@@ -362,5 +362,16 @@
                 "eu disse algo de errado?"
             ]
         }
+    },
+    {
+        "router" : { 
+            "entrada": ["tchal", "xau", "bye"],
+            "saidas":[
+                "xau, amigo até mais...",
+                "tchal até mais!",
+                "então xau!", 
+                "já vai?"
+            ]
+        }
     }
 ]
