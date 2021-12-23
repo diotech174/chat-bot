@@ -1,5 +1,6 @@
 var response = ""; // RESERVA A ULTIMA RESPOSTA ENVIADO PELO ROBÔ
 var nova_pergunta = false;
+var robot = "Zia"; // NOME DO ROBÔ
 
 //=====================================================================================
 
@@ -9,7 +10,7 @@ function getRndInteger(min, max) { // SELECIONA UM VALOR ALEATÓRIAMENTE
 
 //=====================================================================================
 
-function getResponse(filename, pergunta) { // PROCESSA A RESPOSTA 
+function getResponse(filename, search) { // PROCESSA A RESPOSTA 
 
     fetch(filename).then((resp) => resp.text()).then(function(data) {
 
@@ -23,19 +24,19 @@ function getResponse(filename, pergunta) { // PROCESSA A RESPOSTA
         {
             var aux = core[i].router;
 
-            if(aux.pergunta.indexOf(pergunta.toLowerCase()) > -1)
+            if(aux.pergunta.indexOf(search.toLowerCase()) != -1)
             {
 
                 results++;
 
                 var max = aux.respostas.length -1;
-                response = chat + "\n" + aux.respostas[getRndInteger(0, max)];               
+                response = robot + ": " + aux.respostas[getRndInteger(0, max)];               
             }
         }
 
         if(results == 0) // QUANDO NÃO ENCONTRAR UMA RESPOSTA
         {
-            response = chat + "\nnão entendi! pode ser mais claro?";
+            response = "não entendi! pode ser mais claro?";
         }
     });
 }
@@ -47,22 +48,27 @@ function send() // ENVIA PERGUNTA AO ROBÔ
     nova_pergunta = true;
 
     var pergunta = document.getElementById("msg").value;
-    var chat = document.getElementById('chat').value;
 
-    document.getElementById('chat').innerHTML = chat + "\n" + pergunta;
+    var x = document.createElement('label');
+    x.setAttribute('style', 'color: blue');
+    x.innerHTML =  "Você: " + pergunta;
+
+    document.getElementById('chat').appendChild(x);
+    var br = document.createElement('br');
+    document.getElementById('chat').appendChild(br);
+
     getResponse("core.json", pergunta);
 
     document.getElementById("msg").value = "";
 
-    setTimeout(function(){ // 15 SEGUNDOS DE SILÊNCIO
+    setTimeout(function(){ // 40 A 60 SEGUNDOS DE SILÊNCIO
 
         if(nova_pergunta == false)
         {
-            var chat = document.getElementById('chat').value;
-            response = chat + "\nolá você está ai???";
+            response = "olá você está ai???";
         }
 
-    }, 15000);
+    }, getRndInteger(40000, 60000));
 }
 
 //=====================================================================================
@@ -78,13 +84,25 @@ setInterval(function(){ // SIMULAÇÃO
 
             setTimeout(function(){ // MOSTRA RESPOSTA
 
-                document.getElementById('chat').innerHTML = chat;
+                var x = document.createElement('label');
+                x.setAttribute('style', 'color: green');
+                x.innerHTML = chat;
+
+                document.getElementById('chat').appendChild(x);
+                var br = document.createElement('br');
+                document.getElementById('chat').appendChild(br);
+
+                var objDiv = document.getElementById("chat");
+                objDiv.scrollTop = objDiv.scrollHeight;
+
                 document.getElementById('status').setAttribute('class', 'stoped');
+
+                new Audio('sounds/notify.mp3').play();
                 nova_pergunta = false;
 
-            }, getRndInteger(1000, 2000));
+            }, getRndInteger(2000, 8000));
 
-        }, getRndInteger(1000, 5000));
+        }, getRndInteger(2000, 5000));
     }
 }, 1000);
 

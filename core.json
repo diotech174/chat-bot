@@ -43,6 +43,24 @@
         }
     },
     {
+        "router" : { 
+            "pergunta": "posso sim",
+            "respostas":[
+                "que bom, como posso ajudar?", 
+                "que ótimo!"
+            ]
+        }
+    },
+    {
+        "router" : { 
+            "pergunta": "posso",
+            "respostas":[
+                "que bom, como posso ajudar?", 
+                "que ótimo!"
+            ]
+        }
+    },
+    {
         "router": {
             "pergunta" : "bom dia",
             "respostas" : [

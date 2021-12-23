@@ -9,26 +9,49 @@
     <style>
         .stoped{
             position: relative;
-            top: -12px;
-            left: -100px;
+            top: -30px;
+            left:380px;
             color: #FFF;
         }
         .writing{
             position: relative;
-            top: -12px;
-            left: -100px;
+            top: -30px;
+            left: 380px;
             color: #000;
+        }
+
+        .chat-area
+        {
+            border: 1px solid #CCC;
+            overflow: scroll;
+            overflow-x: hidden;
+            padding: 10px;
+            width: 480px;
+            height: 300px;
+            background-color: #FFF;
+        }
+
+        .container
+        {
+            margin: auto;
+            width: 500px;
+            padding-top: 60px;
+        }
+
+        body
+        {
+            background-color: #000;
         }
     </style>
 </head>
 <body>
-
-    <textarea id="chat" cols="60" rows="20" readonly="on"></textarea>
-    <span class="stoped" id="status">escrevendo...</span>
-    <br>
-    <br>
-    <input type="text" id="msg" size="68">
-    <button id="enviar" onclick="send()">enviar</button>
-    
+    <div class="container">
+        <div id="chat" class="chat-area"></div>
+        <span class="stoped" id="status">escrevendo...</span>
+        <br>
+        <br>
+        <input type="text" id="msg" size="65">
+        <button id="enviar" onclick="send()">enviar</button>
+    </div>
 </body>
 </html>
