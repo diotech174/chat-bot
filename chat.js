@@ -65,7 +65,7 @@ function send() // ENVIA PERGUNTA AO ROBÔ
 
         if(nova_pergunta == false)
         {
-            response = "olá você está ai???";
+            response = robot + " olá você está ai???";
         }
 
     }, getRndInteger(40000, 60000));
