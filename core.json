@@ -89,5 +89,25 @@
                 "então voltando ao assunto..."
             ]
         }
+    },
+    {
+        "router": {
+            "pergunta" : "estou sim",
+            "respostas" : [
+                "a que bom!",
+                "ok!",
+                "então voltando ao assunto..."
+            ]
+        }
+    },
+    {
+        "router": {
+            "pergunta" : "espera um pouco",
+            "respostas" : [
+                "tudo bem!",
+                "ok!",
+                "aguardo sim..."
+            ]
+        }
     }
 ]
