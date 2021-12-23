@@ -53,7 +53,7 @@ function send() // ENVIA PERGUNTA AO ROBÔ
     balloon.setAttribute('style', 'min-width: 20px; background-color: #CFF6F4; border: 1px solid #CCC; padding: 8px; border-radius: 5px 5px');
 
     var x = document.createElement('label');
-    x.setAttribute('style', 'color: blue');
+    x.setAttribute('style', 'color: #58ADFB');
     x.innerHTML =  "Você: " + pergunta;
 
     balloon.appendChild(x);
@@ -102,6 +102,11 @@ setInterval(function(){ // SIMULAÇÃO
                 x.setAttribute('style', 'color: green');
                 x.innerHTML = chat;
 
+                var img = document.createElement('img');
+                img.src = "img/zia.png";
+                img.setAttribute("style", "width: 30px; margin-right: 8px");
+
+                balloon.appendChild(img);
                 balloon.appendChild(x);
 
                 document.getElementById('chat').appendChild(balloon);

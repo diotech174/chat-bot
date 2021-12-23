@@ -17,7 +17,7 @@
             position: relative;
             top: -30px;
             left: 300px;
-            color: #000;
+            color: #525252;
         }
 
         .chat-area
@@ -25,7 +25,7 @@
             border: 1px solid #CCC;
             overflow: scroll;
             overflow-x: hidden;
-            padding: 10px;
+            padding: 20px;
             width: 480px;
             height: 300px;
             background-color: #FFF;
@@ -34,27 +34,27 @@
         .container
         {
             margin: auto;
-            width: 500px;
+            width: 550px;
             padding-top: 60px;
         }
 
         body
         {
-            background-color: #000;
+            background-color: #80F6BE;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="chat" class="chat-area">
-            <label id="start">Iniciar conversa...</label>
+            <label id="start" style="color: #525252;">Iniciar conversa...</label>
             <br>
             <br>
         </div>
         <span class="stoped" id="status">escrevendo...</span>
         <br>
         <br>
-        <input type="text" id="message" class="message" size="65">
+        <input type="text" id="message" class="message" size="70">
         <button id="enviar" onclick="send()">enviar</button>
         <script type="text/javascript">
             var msg = document.getElementById("message");
