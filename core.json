@@ -203,6 +203,17 @@
     },
     {
         "router": {
+            "entrada" : ["estou", "feliz"],
+            "saidas" : [
+                "porquê?",
+                "que bom!",
+                "mas porquê?",
+                "ótimo então..."
+            ]
+        }
+    },
+    {
+        "router": {
             "entrada" : ["estou", "um", "pouco", "triste"],
             "saidas" : [
                 "porquê?",
